@@ -24,7 +24,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="150">
     
 <header>
-    <div class="balloon" id="toggle-sound" onclick="toggleSound()">🎵 Nostalgic</div>
+    <div class="balloon" id="toggle-sound" onclick="toggleSound()">🎵 Music</div>
     <!--    NAVBAR FOR LARGE SCREEN-->
     <nav id="my-nav1" class="navbar navbar-expand-lg navbar-light bg-light stroke navbar-light-vision">
         <div class="container">
@@ -50,7 +50,7 @@
                         <a class="nav-link scroll" href="#screenshots">Play2Earn</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#design">Digisol Econnomy</a>
+                        <a class="nav-link scroll" href="#design">Digisol Economy</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#store">Tokenomics</a>
@@ -470,6 +470,114 @@
     </div>
 </section>
 
+
+<section id="exchange" class="exchange">
+    <div class="container">
+        <div class="col-sm-12 col-lg-8 offset-lg-2 text-center pb-0 pb-lg-4">
+            <h1 class="main-heading grey-color">Currency Exchange</h1>
+            <p class="sub-heading">
+                All farming done with the BITS token inside the game can be directly converted into Solana. 
+                By completing daily quests, you can withdraw directly to your wallet. <br><br>
+                All game modes, except the training mode, will result in earnings. 
+                The income-generating modes are: Quests, PVE, offline turn-based PVP, farming, hunting, and tournaments (all positions receive rewards). <br><br>
+                The DIGISOL token will be minted using the funds raised during the whitelist pre-sale of boosters, which will be launched soon. 
+                The market value will depend on the amount raised. <br><br>
+                Initially, only the following boosters will be available: <br>
+                - 5,000 boosters at 1.5x multiplier <br>
+                - 2,500 boosters at 2.0x multiplier <br>
+                - 1,000 boosters at 3.0x multiplier <br><br>
+                Farming multipliers ensure your investment returns faster. Your investment will depend on your gameplay strategy!
+            </p>
+        </div>
+
+
+        <div class="row align-items-center text-center mt-5">
+            <div class="col-md-12">
+                <div class="exchange-container">
+                    <div class="coin coin-1" id="coin1"></div>
+                    <div class="coin coin-2" id="coin2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+
+.exchange {
+    padding: 60px 0;
+    background: #f9f9f9;
+}
+
+.exchange .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exchange-container {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 1s ease;
+}
+
+.coin-1 {
+    background-image: url('/app-landing/img/Bits.png');
+    transform: translateX(-150px);
+}
+
+.coin-2 {
+    background-image: url('/app-landing/img/flake4.png'); 
+    transform: translateX(150px); 
+}
+</style>
+
+<script>
+
+    const coin1 = document.getElementById('coin1');
+    const coin2 = document.getElementById('coin2');
+
+    let isSwapped = false;
+
+
+    function swapCoins() {
+        if (isSwapped) {
+  
+            coin1.style.transform = 'translateX(-150px)';
+            coin2.style.transform = 'translateX(150px)';
+        } else {
+
+            coin1.style.transform = 'translateX(150px)';
+            coin2.style.transform = 'translateX(-150px)';
+        }
+        isSwapped = !isSwapped;
+    }
+
+    setInterval(swapCoins, 3000);
+</script>
+
+
+
+
+
+
+
+
 <section id="store" class="store">
     <div class="container">
         <div class="row">
@@ -478,6 +586,11 @@
                 <p class="sub-heading black-color">digisol has two primary tokens that drive its ecosystem: <strong>BITS</strong> (Reward Token) and <strong>digisol</strong> (Governance Token). Each token serves a unique purpose, ensuring sustainability and excitement within the game.</p>
             </div>
         </div>
+        
+
+
+
+        
         <div class="row mt-4">
             <div class="col-sm-12 col-lg-8 offset-lg-2">
                 <div class="row">
@@ -485,7 +598,7 @@
                         <h2 class="sub-heading grey-color">BITS Token (Reward)</h2>
                         <p class="text-muted">The <strong>BITS</strong> token is the in-game currency used for:
                             <ul>
-                                <li>Evolving your <strong>digisolS</strong>.</li>
+                                <li>Evolving your <strong>digimons</strong>.</li>
                                 <li>Feeding and keeping them alive.</li>
                                 <li>Participating in <strong>dungeons</strong>, <strong>farms</strong>, and other challenges.</li>
                             </ul>
@@ -505,8 +618,8 @@
                         </p>
                     </div>
                     <div class="col-sm-12">
-                        <h2 class="sub-heading grey-color">About digisolS</h2>
-                        <p class="text-muted">Your digital companions, <strong>digisolS</strong>, can lose battles and even die if not properly trained and cared for. Use your resources wisely to keep them strong and ready for the challenges that await!</p>
+                        <h2 class="sub-heading grey-color">About Digimon</h2>
+                        <p class="text-muted">Your digital companions, <strong>digimon</strong>, can lose battles and even die if not properly trained and cared for. Use your resources wisely to keep them strong and ready for the challenges that await!</p>
                     </div>
                 </div>
             </div>
@@ -529,17 +642,116 @@
         </div>
     </div>
 </section>
-
-<section id="footer">
+<section id="tokenomics" class="tokenomics">
     <div class="container">
         <div class="row">
-            <div class="col-12 text-center footer-content">
-                <p class="sub-heading footer_text mt-4"><i class="las la-copyright"></i> Experience a new era of gaming with digisol as we transition from Web2 to Web3. With the power of the Solana blockchain, digisol offers a decentralized, transparent, and player-driven ecosystem.</p>
+            <div class="col-sm-12 col-lg-8 offset-lg-2 text-center pb-0 pb-lg-4">
+                <h1 class="main-heading grey-color">Tokenomics Overview</h1>
+                <p class="sub-heading">Understand the distribution of tokens in the DIGITON economy!</p>
+            </div>
+        </div>
+        <div class="row align-items-center text-center mt-5">
 
+            <div class="col-md-6 text-left">
+                <h3 class="grey-color">Tokenomics Details</h3>
+                <ul class="tokenomics-list">
+                    <li><strong>1B DIGISOL Tokens Minted</strong></li>
+                    <li><strong>1B BITS Tokens Minted</strong></li>
+                </ul>
+                <h4 class="grey-color mt-4">DIGISOL Tokenomics</h4>
+                <ul class="tokenomics-details">
+                    <li><strong>10%</strong> - Marketing and Infrastructure (Ads, YouTube, DexScreener, platforms)</li>
+                    <li><strong>5%</strong> - Development Team</li>
+                    <li><strong>1%</strong> - Initial Booster Airdrop</li>
+                    <li><strong>84%</strong> - Reward Pool</li>
+                </ul>
+            </div>
+
+
+            <div class="col-md-6">
+                <canvas id="tokenomicsChart" width="400" height="400"></canvas>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+    const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+    const tokenomicsChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Marketing & Infrastructure', 'Development Team', 'Initial Airdrop', 'Reward Pool'],
+            datasets: [{
+                label: 'Tokenomics',
+                data: [10, 5, 1, 84], 
+                backgroundColor: [
+                    '#FFA726', 
+                    '#29B6F6',
+                    '#AB47BC', 
+                    '#66BB6A'
+                ],
+                borderColor: '#fff',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'right',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+<style>
+/* Estilização */
+.tokenomics {
+    padding: 60px 0;
+    background: #f9f9f9;
+    font-family: "Pixelify Sans", serif;
+}
+
+.tokenomics h1 {
+    color: #333;
+    font-weight: bold;
+}
+
+.tokenomics-list,
+.tokenomics-details {
+    list-style: none;
+    padding: 0;
+}
+
+.tokenomics-list li,
+.tokenomics-details li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+.tokenomics-details li strong {
+    color: #222;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+}
+</style>
+
 
 
 <!-- JavaScript -->
@@ -547,26 +759,34 @@
 <script src="app-landing/js/bundle.min.js"></script>
 <script src="vendor/js/owl.carousel.min.js"></script>
 <script src="app-landing/js/script.js"></script>
-<audio id="background-music" autoplay muted>
+<audio id="background-music" muted>
     <source src="/app-landing/music/music.mp3" type="audio/mp3">
     Your browser does not support the audio tag.
 </audio>
 
-<div id="toggle-sound" class="balloon" onclick="toggleSound()">🔇 Listen to nostalgic music</div>
-
 <script>
     const audio = document.getElementById("background-music");
-    const butSolana = document.getElementById("toggle-sound");
+    const toggleButton = document.getElementById("toggle-sound");
 
     function toggleSound() {
-        if (audio.muted) {
+        if (audio.paused || audio.muted) {
             audio.muted = false;
-            butSolana.textContent = "🔇 Listen to nostalgic music";
+            audio.play();
+            toggleButton.textContent = "🔇 Turn off";
         } else {
             audio.muted = true;
-            butSolana.textContent = "🎵 Listen to nostalgic music";
+            audio.pause();
+            toggleButton.textContent = "🎵 Play";
         }
     }
+
+    window.onload = () => {
+        try {
+            audio.play();
+        } catch (e) {
+            console.warn("Autoplay was blocked by the browser.");
+        }
+    };
 </script>
 
 <style>
@@ -588,7 +808,7 @@
     }
 
     .balloon:hover {
-        background: #ec6500;
+        background: #d35400;
         transform: scale(1.1);
     }
 
@@ -614,6 +834,7 @@
         }
     }
 </style>
+
 
 </body>
 </html>
