@@ -238,10 +238,10 @@ header .navbar-light-vision{
 }
 
 .bg-header {
-    background-image: url('/app-landing/img/banner.png'); /* Substitua 'sua-imagem.jpg' pelo caminho da imagem */
-    background-size: cover; /* Garante que a imagem cubra todo o container */
-    background-position: center; /* Centraliza a imagem no container */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-image: url('/app-landing/img/banner.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     height: 111vh;
     margin-bottom: 195px;
 }
